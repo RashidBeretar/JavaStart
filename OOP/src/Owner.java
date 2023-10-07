@@ -1,4 +1,4 @@
-public class Owner {
+public class Owner implements IAlive {
     private String name;
 
     public Owner(String name) {

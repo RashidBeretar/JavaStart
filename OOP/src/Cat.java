@@ -1,4 +1,4 @@
-public class Cat {
+public class Cat implements IAlive {
     private String name;
     private int age;
     private Owner owner;
@@ -33,11 +33,17 @@ public class Cat {
     }
 
     public void greet() {
-        System.out.println("Мяу! Меня зовут " +  this.name + ". Мне " +  this.age + " года (лет). Мой владелец - " +  this.owner + ".");
+        System.out.println("Мяу! Меня зовут " + this.name + ". Мне " + this.age + " года (лет). Мой владелец - "
+                + this.owner + ".");
     }
 
     @Override
     public String toString() {
         return this.getName();
+    }
+
+    @Override
+    public void sayHi() {
+        System.out.println("Привет! Мяу");
     }
 }

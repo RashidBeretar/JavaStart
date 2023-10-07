@@ -14,5 +14,10 @@ public class main {
         System.out.println(rec.calculateArea());
         System.out.println(rec.calculatePerimeter());
         // /T2
+        
+        // T3
+        animal1.sayHi();
+        man1.sayHi();
+        // /T3
     }
 }
