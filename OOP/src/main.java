@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class main {
     public static void main(String[] args) {
         // T1
@@ -21,8 +23,28 @@ public class main {
         // /T3
         
         // T4
-        IMyPredicate myPredicate = x -> x > 0;
-        System.out.println(myPredicate.whyamineeded(10));
+        // IMyPredicate myPredicate = x -> x > 0;
+        // System.out.println(myPredicate.whyamineeded(10));
         // /T4
+        
+        // T4
+        Container<Integer> intContainer = new Container<Integer>(42);
+        Container<String> stringContainer = new Container<>("Привет, мир!");
+        Container<Double> doubleContainer = new Container<>(42.);
+
+        intContainer.printElement();    // Вывод: Тип элемента: java.lang.Integer
+        stringContainer.printElement(); // Вывод: Тип элемента: java.lang.String
+        doubleContainer.printElement(); // Вывод: Тип элемента: java.lang.String
+
+        
+        GenericExample<Integer> intPrinter = new GenericExample<>();
+        GenericExample<String> stringPrinter = new GenericExample<>();
+
+        List<Integer> intList = List.of(1, 2, 3);
+        List<String> stringList = List.of("Привет", "Мир");
+
+        intPrinter.printList(intList); // Вывод: 1 2 3
+        stringPrinter.printList(stringList); // Вывод: Привет Мир
+        // T4
     }
 }
