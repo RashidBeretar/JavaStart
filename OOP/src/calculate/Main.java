@@ -7,7 +7,7 @@ public class Main {
     Controller controller = new Controller(model, view);
 
     double num1 = 10;
-    double num2 = 0;
+    double num2 = 2;
     char operator = '/';
 
     controller.calculate(num1, num2, operator);
